@@ -1,0 +1,18 @@
+# 原始来源 PDF：版权保留，不在仓库分发，仅提供来源链接（见 references/source-guide.md）
+*.pdf
+
+# skill 市场元数据
+_meta.json
+
+# 本地工具与临时产物
+.mimosa/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+
+# 数据准备脚本（一次性数据管线，产物 CSV 已入库）本地维护，不入库
+scripts/clean_glossary.py
+scripts/scrape_mainland.py
+scripts/build_mainland_terms.py
