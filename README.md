@@ -4,14 +4,13 @@
 [![Data License: CC BY-NC 4.0](https://img.shields.io/badge/Data%20License-CC%20BY--NC%204.0-lightgrey.svg)](LICENSE-DATA)
 [![Terms: 34,000+](https://img.shields.io/badge/Terms-34,000+-blue.svg)](references/glossary.csv)
 
-面向中国大陆法律实务的中英双语法律术语翻译工具。基于香港律政司(DOJ)双语法律词汇表清洗整理的 ~34,000 条通用法律术语，加上 ~950 条中国大陆法律体系特色术语、472 条英-德对照法律术语（威斯康星州法院）以及美国法院术语英文释义（加州萨克拉门托县高等法院）。
+面向中国大陆法律实务的中英双语法律术语翻译工具。基于香港律政司(DOJ)双语法律词汇表清洗整理的 ~34,000 条通用法律术语，加上 ~950 条中国大陆法律体系特色术语与 472 条英-德对照法律术语（威斯康星州法院）。
 
 ## ✨ 特色
 
 - 📚 **34,000+ 通用法律术语** — 涵盖民法、刑法、商法、诉讼法、宪法行政法、国际法
 - 🇨🇳 **950+ 大陆特色术语** — PRC 民法典、刑法、公司法等核心法律官方英译
 - 🇩🇪 **472 条英-德对照** — 威斯康星州法院《英德法律词汇表》，含英文释义，支持德文查询
-- 🇺🇸 **美国法院术语释义** — 萨克拉门托县高等法院《English Legal Glossary》，英文术语+权威英文释义
 - 🏛️ **拉丁法律术语** — ~430 条拉丁术语均附双语注释
 - 🔍 **智能搜索** — 精确匹配 → 子串搜索 → 模糊匹配，自动路由（中/英/德三语字段）
 - 🏷️ **领域分类** — 六大法律领域标注，支持按领域筛选
@@ -97,7 +96,6 @@ python scripts/lookup.py -q "指导性案例"
 | `glossary.csv` | 33,996 | 通用法律术语（清洗自 DOJ 双语词汇表） |
 | `mainland_terms.csv` | 951 | 中国大陆法律体系特色术语 |
 | `german_legal_glossary.csv` | 472 | 英-德对照法律术语（威斯康星州法院） |
-| `us_legal_definitions.csv` | 整理中 | 美国法院术语英文释义（萨克拉门托县高等法院），见 [source-guide](references/source-guide.md) |
 
 ### 领域分布
 
@@ -138,7 +136,6 @@ python scripts/lookup.py -q "指导性案例"
 |------|------|------|
 | **香港律政司双语法律词汇表** | 英文法律词汇的主要来源（已清洗去香港专属内容） | https://www.doj.gov.hk/en/publications/glossary.html |
 | **威斯康星州法院《Glossary of Legal Terminology – English–German》** | 472 条英-德对照 + 英文释义 | https://www.wicourts.gov/services/interpreter/docs/germanglossary.pdf |
-| **加州萨克拉门托县高等法院《English Legal Glossary》**（康特拉科斯塔县高等法院网站托管） | 美国法院术语 + 英文释义 | https://contracosta.courts.ca.gov/system/files/general/english-legal-glossary.pdf |
 | **中华人民共和国民法典 / 刑法 / 公司法等 NPC 官方英译本** | 大陆法律术语 | — |
 
 > 检索/收录日期：2026-10-24。详细来源说明与数据处理方法见 [references/source-guide.md](references/source-guide.md)
@@ -153,9 +150,10 @@ python scripts/lookup.py -q "指导性案例"
 ## 🗺️ 路线图
 
 - [x] v1.0 — 数据清洗 + 大陆术语精选 + ZCode Skill
-- [x] v1.1 — 新增英-德对照词汇表（威斯康星州法院）与美国法院术语释义（萨克拉门托）
-- [ ] v1.2 — 改进领域分类算法（降低"通用"占比）
-- [ ] v1.3 — 在线抓取 NPC/CLT 最新术语
+- [x] v1.1 — 新增英-德对照词汇表（威斯康星州法院）
+- [ ] v1.2 — 接入美国法院术语释义（加州萨克拉门托县高等法院《English Legal Glossary》）
+- [ ] v1.3 — 改进领域分类算法（降低"通用"占比）
+- [ ] v1.4 — 在线抓取 NPC/CLT 最新术语
 - [ ] v2.0 — 接入 pkulaw MCP 做实时法条验证
 - [ ] v2.1 — LLM 辅助的上下文翻译建议
 - [ ] v3.0 — Web 界面、社区贡献机制
@@ -167,7 +165,7 @@ python scripts/lookup.py -q "指导性案例"
 | 代码与文档（`scripts/`、`SKILL.md` 等） | **MIT License** | ✅ 允许 | [LICENSE](LICENSE) |
 | 术语数据（`references/*.csv`） | **CC BY-NC 4.0** | ❌ 禁止 | [LICENSE-DATA](LICENSE-DATA) |
 
-> ⚠️ 术语数据的原始来源（香港律政司、威斯康星州法院、加州萨克拉门托县高等法院、NPC 等）各有其使用条款，请在使用时自行确认合规性，并保留来源署名。原始 PDF 不随仓库分发，仅提供来源链接。
+> ⚠️ 术语数据的原始来源（香港律政司、威斯康星州法院、NPC 等）各有其使用条款，请在使用时自行确认合规性，并保留来源署名。原始 PDF 不随仓库分发，仅提供来源链接。
 
 ## 🤝 贡献
 

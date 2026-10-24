@@ -8,8 +8,7 @@ description: >
   are expressed in Chinese or English. Covers general legal vocabulary
   plus dedicated PRC Civil Code, Criminal Law, Company Law, and
   procedural law terminology. Also supports English-German legal term
-  lookup (Wisconsin Courts glossary) and US court legal term
-  definitions (Sacramento Superior Court glossary).
+  lookup (Wisconsin Courts glossary).
 ---
 
 # Legal Translation Skill — 法律术语中英互译
@@ -23,11 +22,10 @@ This skill provides authoritative Chinese-English legal terminology lookup based
 | `glossary.csv` | ~34,000 | General legal terms (cleaned from HK DOJ bilingual glossary) |
 | `mainland_terms.csv` | ~950 | PRC-specific legal concepts (Civil Code, Criminal Law, Company Law, etc.) |
 | `german_legal_glossary.csv` | 472 | English-German legal terms + English explanations (Wisconsin Courts) |
-| `us_legal_definitions.csv` | ~1,300 | US court legal terms with plain-English definitions (Sacramento Superior Court; CN equivalents backfilled) |
 
-**Coverage**: Civil law, criminal law, commercial law, procedural law, constitutional/administrative law, international law, plus Latin legal terms. English-German bilingual lookup and US court terminology as supplementary sources.
+**Coverage**: Civil law, criminal law, commercial law, procedural law, constitutional/administrative law, international law, plus Latin legal terms. English-German bilingual lookup as a supplementary source.
 
-**Limitations**: The general glossary leans toward common law terminology (Hong Kong origin). For PRC-specific socialist legal system concepts, supplement with `mainland_terms.csv`. The German glossary is English-German only (no Chinese); US definitions are English-only with Chinese equivalents backfilled from the existing glossaries.
+**Limitations**: The general glossary leans toward common law terminology (Hong Kong origin). For PRC-specific socialist legal system concepts, supplement with `mainland_terms.csv`. The German glossary is English-German only (no Chinese).
 
 ---
 
@@ -63,15 +61,6 @@ This skill provides authoritative Chinese-English legal terminology lookup based
 | **威斯康星州法院《Glossary of Legal Terminology – English–German》** | 472 词，英→德对照 + 英文释义。编译：Dustin DeGrande（Dagmar Grimm 修订），威斯康星州法院系统法庭口译服务发布 |
 
 > 来源: https://www.wicourts.gov/services/interpreter/docs/germanglossary.pdf
-
-### 美国法院术语释义 (us_legal_definitions.csv)
-
-| 来源 | 说明 |
-|------|------|
-| **加州萨克拉门托县高等法院《English Legal Glossary》**（由康特拉科斯塔县高等法院网站托管） | 英文术语 + 英文释义；中文对照由既有词表按英文精确匹配回填 |
-
-> 来源: https://contracosta.courts.ca.gov/system/files/general/english-legal-glossary.pdf
-> 注意：`us_legal_definitions.csv` 的「中文对照」列是按英文精确匹配从 `glossary.csv` / `mainland_terms.csv` 回填的，并非来源文件自带，引用时请知悉。
 
 ### 核验方式
 
@@ -246,7 +235,6 @@ User: "How do you say 善意取得 in English?"
 | `references/glossary.csv` | Main terminology database (33,996 entries) |
 | `references/mainland_terms.csv` | PRC-specific legal terms (951 entries) |
 | `references/german_legal_glossary.csv` | English-German legal terms (472 entries, Wisconsin Courts) |
-| `references/us_legal_definitions.csv` | US court legal terms with English definitions (Sacramento Superior Court) |
 | `references/source-guide.md` | Source column explanation and data provenance |
 | `references/legal-domains.md` | Legal domain classification taxonomy |
 
